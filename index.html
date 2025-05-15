@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TESSA | AI Biomedical Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+    }
+    aside {
+      background-color: #6a1b9a;
+      color: white;
+      width: 260px;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    aside h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .sidebar-btn {
+      background-color: white;
+      color: #6a1b9a;
+      border: none;
+      padding: 0.8rem 1.2rem;
+      margin: 0.5rem 0;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: 600;
+    }
+    .sidebar-desc {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    main {
+      flex-grow: 1;
+      padding: 2rem;
+      background-color: #fafafa;
+    }
+    .section {
+      max-width: 900px;
+      margin: auto;
+      padding-bottom: 2rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .features-grid, .how-it-works {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .card h3 {
+      color: #6a1b9a;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #999;
+    }
+    .chatbox {
+      height: 600px;
+      background: white;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      aside {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+  </style>
+</head>
+<body>
+  <aside>
+    <h1>TESSA</h1>
+    <button class="sidebar-btn" onclick="document.getElementById('chatbox').scrollIntoView({ behavior: 'smooth' });">Chat with TESSA</button>
+    <button class="sidebar-btn" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">About TESSA</button>
+    <p class="sidebar-desc">TESSA helps diagnose medical equipment problems and recommends service options.</p>
+  </aside>
+
+  <main>
+    <div class="section" id="about">
+      <h2>Meet TESSA</h2>
+      <p>Your AI-powered Technical Equipment Support & Service Assistant for biomedical technology</p>
+    </div>
+
+    <div class="section">
+      <h2>What is TESSA?</h2>
+      <p>TESSA is an advanced AI assistant designed for biomedical technicians and healthcare professionals who work with medical equipment. Using natural language processing and machine learning, TESSA helps diagnose technical issues, recommend service options, and provide guidance for maintaining critical devices.</p>
+    </div>
+
+    <div class="section">
+      <h2>Key Features</h2>
+      <div class="features-grid">
+        <div class="card">
+          <h3>Rapid Diagnostics</h3>
+          <p>Quickly identify issues based on symptoms and error codes.</p>
+        </div>
+        <div class="card">
+          <h3>Procedural Guidance</h3>
+          <p>Step-by-step instructions for calibration and repairs.</p>
+        </div>
+        <div class="card">
+          <h3>Equipment Database</h3>
+          <p>Access to specs, common issues, and maintenance schedules.</p>
+        </div>
+        <div class="card">
+          <h3>Smart Recommendations</h3>
+          <p>Service suggestions based on symptoms and device history.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>How TESSA Works</h2>
+      <div class="how-it-works">
+        <div class="card">
+          <h3>1. Describe Your Equipment Issue</h3>
+          <p>Include any error codes, symptoms, or behavior in plain English.</p>
+        </div>
+        <div class="card">
+          <h3>2. TESSA Analyzes the Information</h3>
+          <p>Uses its database to understand and match your problem.</p>
+        </div>
+        <div class="card">
+          <h3>3. Receive Expert Guidance</h3>
+          <p>Get step-by-step repair instructions or service advice.</p>
+        </div>
+        <div class="card">
+          <h3>4. Implement the Solution</h3>
+          <p>Resolve the issue or get referred to a trusted technician.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Ready to Get Started?</h2>
+      <button class="sidebar-btn" style="margin-top: 1rem;">Chat with TESSA Now</button>
+      <div class="chatbox" id="chatbox">
+        <iframe src="https://chatgpt.com/g/g-681fd53bc8588191835d70de5c30e4da-tessa" title="TESSA Chat"></iframe>
+      </div>
+      <small style="display:block; text-align:center; margin-top:0.5rem; color:#999">TESSA may produce inaccurate information about medical devices.</small>
+    </div>
+
+    <footer>
+      © 2023 TESSA - Technical Equipment Support & Service Assistant
+    </footer>
+  </main>
+</body>
+</html>
